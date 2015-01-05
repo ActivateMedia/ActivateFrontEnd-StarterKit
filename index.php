@@ -32,6 +32,32 @@ foreach($files as $file): ?>
 
 </ul>
 
+
+<h4>Examples:</h4>
+<?php
+
+$examples_folder = "bootstrap-examples";
+$files = scandir($examples_folder);
+
+?>
+<ul>
+<?php
+foreach($files as $file): ?>
+		
+	<?php
+		$path_parts = pathinfo($file);
+		if(!isset($path_parts['extension'])) continue;
+		if($path_parts['extension'] == "html" || $path_parts['extension'] == "php" && !in_array($path_parts["basename"], $hidden_files)) :
+	?>
+		
+	<li style="margin-top: 5px;"><a href="<?php echo $examples_folder; ?>/<?php echo $file; ?>"><?php echo $file; ?></a></li>
+	
+	<?php endif; ?>
+	
+<?php endforeach; ?>
+
+</ul>
+
 <?php
 
 if($rc == 0) {
