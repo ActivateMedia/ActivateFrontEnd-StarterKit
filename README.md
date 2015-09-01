@@ -22,6 +22,19 @@ The **compiler.php** file handle the generation of the CSS (from LESS) and minif
 #### Images
 Use lazy images and try to reduce the quality of jpg using Photoshop Save for Web & png with transparency with [ImageAlpha](http://pngmini.com).
 
+#### Animations
+The project includes Animate.css and a custom jQuery function to trigger the animations.
+```
+toggleAnimation(target, animationName).
+```
+```
+$(function(){
+  $('#button').click(function(e){ 
+    toggleAnimation('#button', 'shake');
+  });
+});
+```
+
 #### Favicon
 Use http://realfavicongenerator.net to generate the multi device favicons. (See tpl/inc.head.favicons.php).
 
