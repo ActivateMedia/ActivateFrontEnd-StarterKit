@@ -25,7 +25,7 @@ Use lazy images and try to reduce the quality of jpg using Photoshop Save for We
 #### Animations
 The project includes Animate.css and a custom jQuery function to trigger the animations.
 ```
-toggleAnimation(target, animationName).
+toggleAnimation(target, animationName);
 ```
 ```
 $(function(){
