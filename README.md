@@ -22,6 +22,9 @@ The **compiler.php** file handle the generation of the CSS (from LESS) and minif
 #### Images
 Use lazy images and try to reduce the quality of jpg using Photoshop Save for Web & png with transparency with [ImageAlpha](http://pngmini.com).
 
+#### Bootstrap
+**Disable** the LESS @import in /less/bootstrap-3.3.5/bootstrap.less that **you do not need.** Also **disable** the bootstrap JavaScript files import in compiler.php that **you do not need.**
+
 #### Animations
 The project includes Animate.css and a custom jQuery function to trigger the animations.
 ```
@@ -34,6 +37,12 @@ $(function(){
   });
 });
 ```
+
+#### htaccess
+Use the **.htaccess** to optimize the content delivery. Apache modules required: *mod_headers.c*, *mod_expires.c*, *mod_deflate.c*.
+
+#### robots.txt
+The default robots.txt file will disallow Search Engines to index the website. Leave this on the development server/domain but **remember to delete it on the live site**.
 
 #### Favicon
 Use http://realfavicongenerator.net to generate the multi device favicons. (See tpl/inc.head.favicons.php).
